@@ -28,8 +28,7 @@ input {
     min-height: 100vh;
 }
 
-.sidebar,
-.main-content {
+.sidebar {
     padding: 15px;
 }
 
@@ -175,11 +174,11 @@ input {
 }
 
 .main-content {
-    padding: 25px 20px;
+    padding: 20px;
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 15px;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
     background-color: #E3E8F0;
     color: #333;
 }
@@ -201,11 +200,11 @@ input {
     background-color: white;
     box-shadow: 0 2px 10px 0 #00000050;
     border-radius: 5px;
-    padding: 20px 15px;
+    padding: 20px;
     border-left: 5px solid orange;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 30px;
 }
 
 .projects__card p {
@@ -233,15 +232,62 @@ input {
 }
 
 .announcements {
-    background-color: darkmagenta;
+    grid-column: 2 / 3;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
+.announcements__card {
+    background-color: #fff;
+    box-shadow: 0 2px 10px 0 #00000050;
+    padding: 0 30px;
+    border-radius: 5px;
+}
+
+.announcements__content {
+    padding: 20px 0;
+}
+
+.announcements__content:not(:last-child) {
+    border-bottom: 2px solid #E3E8F0;
+}
+
+.announcements__content-text {
+    color: #999;
+    font-size: 0.8rem;
+}
+
 .trending {
-    background-color: darkgoldenrod;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.trending__card {
+    box-shadow: 0 2px 10px 0 #00000050;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.trending__content {
+    display: flex;
+    gap: 10px;
+}
+
+.trending__moto {
+    font-size: 0.7rem;
+    color: #999;
+}
+
+.trending__profile-pic {
+    width: 30px;
+    height: auto;
+    border-radius: 50%;
 }
